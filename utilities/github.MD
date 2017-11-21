@@ -1,5 +1,5 @@
 ### Clonar repositório
-git clone <repo>
+```git clone <<repo>>```
 
 ### Baixar atualizações
 git pull origin <<branch>>
