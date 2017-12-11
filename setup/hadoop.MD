@@ -9,19 +9,29 @@ wget http://www-us.apache.org/dist/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.g
 ```
 
 * Extrai os arquivos para um diretório específico (crie o diretório antes se for necessário)
-```sudo tar -zxvf hadoop-2.8.1.tar.gz -C /etc```
+```
+sudo tar -zxvf hadoop-2.8.1.tar.gz -C /etc
+```
 
 * Cria um link para o diretório de instalação do hadoop (este procedimento pode ser útil em atualizações de versão)
-```ln -s hadoop-2.8.1 hadoop```
+```
+ln -s hadoop-2.8.1 hadoop
+```
 
 * Configure o arquivo hadoop-env com a localização do $JAVA_HOME
-```sudo vi /opt/hadoop/etc/hadoop/hadoop-env.sh```
+```
+sudo vi /opt/hadoop/etc/hadoop/hadoop-env.sh
+```
 
 Encontre a linha 
-```export JAVA_HOME=$```
+```
+export JAVA_HOME=$
+```
 
 E troque por
-```export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")```
+```
+export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+```
 
 * Configure as variáveis de ambiente no arquivo .bashrc ou zhshel.rc
 ```
@@ -52,7 +62,9 @@ mkdir /home/hadoop/hadoopdata/log
 ```
 
 * Format HDFS
-```hdfs namenode -format```
+```
+hdfs namenode -format
+```
 
 * Iniciar os serviços hds e yarn
 ```
@@ -62,15 +74,20 @@ cd $HADOOP_HOME/sbin/
 ```
 
 * Accesse Hadoop Services no Browser
+
 http://your_server:50070/
 
 * Informacoes sobre o cluster and todas as aplicacoes
+
 http://your_server:8088/
 
 * Informacoes sobre o datanode.
+
 http://your_server:50075/ 
 
 ### Referências
 https://www.vultr.com/docs/how-to-install-hadoop-in-stand-alone-mode-on-centos-7 
+
 https://tecadmin.net/setup-hadoop-single-node-cluster-on-centos-redhat/
+
 
