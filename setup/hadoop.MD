@@ -1,7 +1,11 @@
-## Instalação do Hadoop modo stand alone
+## Instalação do Hadoop modo stand alone com Yarn
 
 Pré-requisitos:
 * Instalação do Java
+
+Configuração do servidor
+* 2 vcores
+* 1GB RAM
 
 ### Download e instação inicial
 
@@ -145,6 +149,33 @@ sudo vi core-site.xml
   <name>yarn.nodemanager.aux-services</name>
     <value>mapreduce_shuffle</value>
  </property>
+
+ <property>
+  <name>yarn.nodemanager.resource.cpu-vcores</name>
+    <value>2</value>
+ </property>
+ <property>
+  <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>1024</value>
+ </property>
+
+ <property>
+  <name>yarn.scheduler.maximum-allocation-mb</name>
+    <value>512</value>
+ </property>
+ <property>
+  <name>yarn.scheduler.minimum-allocation-mb</name>
+    <value>256</value>
+ </property>
+ <property>
+  <name>yarn.scheduler.maximum-allocation-vcores</name>
+    <value>2</value>
+ </property>
+ <property>
+  <name>yarn.scheduler.minimum-allocation-vcores</name>
+    <value>1</value>
+ </property>
+
 </configuration>
 ```
 
