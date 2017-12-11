@@ -4,25 +4,26 @@
 
 * Download
 Verifique a última versão disponível em https://hadoop.apache.org/releases.html
-wget http://www-us.apache.org/dist/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz
+```wget http://www-us.apache.org/dist/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz```
 
 * Extrai os arquivos para um diretório específico (crie o diretório antes se for necessário)
-sudo tar -zxvf hadoop-2.8.1.tar.gz -C /opt
+```sudo tar -zxvf hadoop-2.8.1.tar.gz -C /etc```
 
 * Cria um link para o diretório de instalação do hadoop (este procedimento pode ser útil em atualizações de versão)
-ln -s hadoop-2.8.1 hadoop
+```ln -s hadoop-2.8.1 hadoop```
 
 * Configure o arquivo hadoop-env com a localização do $JAVA_HOME
-sudo vi /opt/hadoop/etc/hadoop/hadoop-env.sh
+```sudo vi /opt/hadoop/etc/hadoop/hadoop-env.sh```
 
 Encontre a linha 
-export JAVA_HOME=$
+```export JAVA_HOME=$```
 
 E troque por
-export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+```export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")```
 
 * Configure as variáveis de ambiente no arquivo .bashrc ou zhshel.rc
-export HADOOP_HOME=/opt/hadoop
+```
+export HADOOP_HOME=/etc/hadoop
 export HADOOP_PREFIX=$HADOOP_HOME
 export HADOOP_INSTALL=$HADOOP_HOME
 export HADOOP_MAPRED_HOME=$HADOOP_HOME
@@ -33,32 +34,38 @@ export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export HADOOP_TMP_DIR=/home/hadoop/hadoopdata
 export HADOOP_LOG_DIR=$HADOOP_TMP_DIR/log
+```
 
 * Adiciona PATH do hadoop nas variáveis de ambiente por conveniência
+```
 echo "export PATH=/opt/hadoop-2.8.1/bin:$PATH" | sudo tee -a /etc/profile
 source /etc/profile
-
+```
 
 * Crie os diretorios utilizados nas configuracoes
+```
 mkdir /home/hadoop/hadoopdata/hdfs/namenode
 mkdir /home/hadoop/hadoopdata/hdfs/datanode
 mkdir /home/hadoop/hadoopdata/log
+```
 
 * Format HDFS
-hdfs namenode -format
+```hdfs namenode -format```
 
 * Iniciar os serviços hds e yarn
+```
 cd $HADOOP_HOME/sbin/
 ./start-dfs.sh (starts the namenode and the datanode)
 ./start-yarn.sh
+```
 
-* Access Hadoop Services in Browser
+* Accesse Hadoop Services no Browser
 http://your_server:50070/
 
-* Now access port 8088 for getting the information about cluster and all applications
+* Informacoes sobre o cluster and todas as aplicacoes
 http://your_server:8088/
 
-* Access port 50075 for getting details about datanode.
+* Informacoes sobre o datanode.
 http://your_server:50075/ 
 
 ### Referências
