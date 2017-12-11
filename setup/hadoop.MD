@@ -93,6 +93,61 @@ sudo vi core-site.xml
 </configuration>
 ```
 
+* hdfs-site.xml
+
+```
+<configuration>
+<property>
+ <name>dfs.replication</name>
+ <value>1</value>
+</property>
+
+<property>
+  <name>dfs.name.dir</name>
+    <value>file:///home/hadoop/hadoopdata/hdfs/namenode</value>
+</property>
+
+<property>
+  <name>dfs.data.dir</name>
+    <value>file:///home/hadoop/hadoopdata/hdfs/datanode</value>
+</property>
+</configuration>
+```
+
+* mapred-site.xml
+
+```
+<configuration>
+ <property>
+  <name>mapreduce.framework.name</name>
+   <value>yarn</value>
+ </property>
+
+
+ <property>
+  <name>mapreduce.map.memory.mb</name>
+    <value>2048</value>
+ </property>
+
+ <property>
+  <name>mapreduce.reduce.memory.mb</name>
+    <value>4096</value>
+ </property>
+
+</configuration>
+```
+
+* yarn-site.xml
+
+```
+<configuration>
+ <property>
+  <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+ </property>
+</configuration>
+```
+
 ### Formatação do file system e inicialização dos serviços
 
 * Format HDFS
