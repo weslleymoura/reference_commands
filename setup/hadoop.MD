@@ -4,7 +4,9 @@
 
 * Download
 Verifique a última versão disponível em https://hadoop.apache.org/releases.html
-```wget http://www-us.apache.org/dist/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz```
+```
+wget http://www-us.apache.org/dist/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz
+```
 
 * Extrai os arquivos para um diretório específico (crie o diretório antes se for necessário)
 ```sudo tar -zxvf hadoop-2.8.1.tar.gz -C /etc```
