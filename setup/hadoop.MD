@@ -1,5 +1,10 @@
 ## Instalação do Hadoop modo stand alone
 
+Pré-requisitos:
+* Instalação do Java
+
+### Download e instação inicial
+
 * Primeiramente, crie um usuário hadoop e garanta que ele consiga fazer ssh localhost
 
 * Download
@@ -33,7 +38,7 @@ E troque por
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 ```
 
-* Configure as variáveis de ambiente no arquivo .bashrc ou zhshel.rc
+* Configure as variáveis de ambiente no arquivo .bashrc
 ```
 export HADOOP_HOME=/etc/hadoop
 export HADOOP_PREFIX=$HADOOP_HOME
@@ -61,6 +66,35 @@ mkdir /home/hadoop/hadoopdata/hdfs/datanode
 mkdir /home/hadoop/hadoopdata/log
 ```
 
+### Configurações específicas
+
+Acesse o diretório dos arquivos de configuração do Hadoop
+```
+cd $HADOOP_HOME/etc/hadoop
+```
+
+* core-site.xml
+```
+sudo vi core-site.xml
+```
+
+```
+<configuration>
+<property>
+  <name>fs.default.name</name>
+    <value>hdfs://localhost:9000</value>
+</property>
+
+<property>
+  <name>hadoop.security.authentication</name>
+    <value>simple</value>
+</property>
+
+</configuration>
+```
+
+### Formatação do file system e inicialização dos serviços
+
 * Format HDFS
 ```
 hdfs namenode -format
@@ -73,17 +107,9 @@ cd $HADOOP_HOME/sbin/
 ./start-yarn.sh
 ```
 
-* Accesse Hadoop Services no Browser
-
-http://your_server:50070/
-
-* Informacoes sobre o cluster and todas as aplicacoes
-
-http://your_server:8088/
-
-* Informacoes sobre o datanode.
-
-http://your_server:50075/ 
+* Accesse Hadoop Services no Browser - http://your_server:50070/
+* Informacoes sobre o cluster and todas as aplicacoes - http://your_server:8088/
+* Informacoes sobre o datanode - http://your_server:50075/ 
 
 ### Referências
 https://www.vultr.com/docs/how-to-install-hadoop-in-stand-alone-mode-on-centos-7 
