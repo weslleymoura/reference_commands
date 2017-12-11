@@ -25,7 +25,7 @@ ln -s hadoop-2.8.1 hadoop
 
 * Configure o arquivo hadoop-env com a localização do $JAVA_HOME
 ```
-sudo vi /opt/hadoop/etc/hadoop/hadoop-env.sh
+sudo vi /etc/hadoop/etc/hadoop/hadoop-env.sh
 ```
 
 Encontre a linha 
@@ -55,7 +55,7 @@ export HADOOP_LOG_DIR=$HADOOP_TMP_DIR/log
 
 * Adiciona PATH do hadoop nas variáveis de ambiente por conveniência
 ```
-echo "export PATH=/opt/hadoop-2.8.1/bin:$PATH" | sudo tee -a /etc/profile
+echo "export PATH=/etc/hadoop-2.8.1/bin:$PATH" | sudo tee -a /etc/profile
 source /etc/profile
 ```
 
