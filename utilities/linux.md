@@ -1,10 +1,3 @@
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
-
 ## Comandos Linux mais utilizados
 
 Lista todos os arquivos como "Human Readable Format" (lh) + arquivos ocultos (a) 
@@ -51,16 +44,16 @@ cp origem dest -> copiar arquivo
 Atribui permissão total no arquivo file.
 Tendo em mente que o conceito de binário significa 0 = desligado e 1 = ligado, vejamos como fica na tabela abaixo:
 
-|rwx    |
+| rwx     |
 -------
-|0 - 000|
-|1 - 001|
-|2 - 010|
-|3 - 011|
-|4 - 100|
-|5 - 101|
-|6 - 110|
-|7 - 111|
+| 0 - 000 |
+| 1 - 001 |
+| 2 - 010 |
+| 3 - 011 |
+| 4 - 100 |
+| 5 - 101 |
+| 6 - 110 |
+| 7 - 111 |
  
 Onde "rwx" são as permissões de um arquivo, ou seja:
 r=read (leitura)
