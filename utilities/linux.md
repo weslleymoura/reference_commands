@@ -56,27 +56,25 @@ Tendo em mente que o conceito de binário significa 0 = desligado e 1 = ligado, 
 |7| 111 |
  
 Onde "rwx" são as permissões de um arquivo, ou seja:
-r=read (leitura)
-w=write (gravação, alteração, deleção)
-x=execute (execução)
+* r=read (leitura)
+* w=write (gravação, alteração, deleção)
+* x=execute (execução)
 
 Feito isso, sabemos que um arquivo ou diretório possui 3 modos de permissão. Uma permissão para o DONO do arquivo ou seja, quem o criou, uma outra permissão para o GRUPO do usuário dono do arquivo, e outra permissão para QUALQUER outro usuário ou grupo.
 
 Sabendo disso, temos a tabela final abaixo:
 
-dono grupo outros
-     rwx   rwx   rwx
- 0 - 000   000   000
- 1 - 001   001   001
- 2 - 010   010   010
- 3 - 011   011   011
- 4 - 100   100   100
- 5 - 101   101   101
- 6 - 110   110   110
- 7 - 111   111   111
-
-
-
+|   |dono |grupo |outros|
+|---|-----|------|------|
+|   | rwx |  rwx |  rwx |
+| 0 | 000 |  000 |  000 |
+| 1 | 001 |  001 |  001 |
+| 2 | 010 |  010 |  010 |
+| 3 | 011 |  011 |  011 |
+| 4 | 100 |  100 |  100 |
+| 5 | 101 |  101 |  101 |
+| 6 | 110 |  110 |  110 |
+| 7 | 111 |  111 |  111 |
 
 ```
 chmod 777 file
