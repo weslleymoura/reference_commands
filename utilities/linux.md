@@ -50,7 +50,7 @@ Tendo em mente que o conceito de binário significa 0 = desligado e 1 = ligado, 
 | Content Cell  | 
 
 | rwx     |
--------
+|-------  |
 | 0 - 000 |
 | 1 - 001 |
 | 2 - 010 |
