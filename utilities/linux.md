@@ -44,6 +44,11 @@ cp origem dest -> copiar arquivo
 Atribui permissão total no arquivo file.
 Tendo em mente que o conceito de binário significa 0 = desligado e 1 = ligado, vejamos como fica na tabela abaixo:
 
+| First Header  | 
+| ------------- | 
+| Content Cell  | 
+| Content Cell  | 
+
 | rwx     |
 -------
 | 0 - 000 |
