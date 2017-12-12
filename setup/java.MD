@@ -1,4 +1,4 @@
-## Instalação do Java 8
+## Instalação do Java
 
 ### Pré requisitos e comentários
 * Procedimento realizado no Linux CentOS
