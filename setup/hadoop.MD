@@ -1,11 +1,8 @@
 ## Instalação do Hadoop modo stand alone com Yarn
 
-Pré-requisitos:
-* Instalação do Java
-
-Configuração do servidor
-* 2 vcores
-* 1GB RAM
+### Pré requisitos e comentários
+* Necessário instalar o Java antes de realizar a instalação do Hadoop
+* Este servidor possui 2 vcores e 1GB RAM
 
 ### Download e instação inicial
 
