@@ -1,5 +1,11 @@
 ## Instalação do Java 8
 
+### Pré requisitos e comentários
+* Procedimento realizado no Linux CentOS
+* Verifique a versão que você quer instalar (este procedimento refere-se à versão Java 8)
+
+### Instalação
+
 * Executa instalação
 ```
 sudo yum install -y java-1.8.0-openjdk
