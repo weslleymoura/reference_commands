@@ -101,3 +101,8 @@ Verificar as portas de um determinado host (precisa instalar o nmap)
 nmap localhost
 nmap -p 9000 localhost (verifica especificamente a porta 9000)
 ```
+
+O arquivo /etc/hosts possui as configurações de DNS local
+```
+vi /etc/hosts
+```
