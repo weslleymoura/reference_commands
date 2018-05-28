@@ -95,3 +95,9 @@ Instalação de pacotes (CentOs)
 ```
 sudo yum install <<nome do software>>
 ```
+
+Verificar as portas de um determinado host (precisa instalar o nmap)
+```
+nmap localhost
+nmap -p 9000 localhost (verifica especificamente a porta 9000)
+```
