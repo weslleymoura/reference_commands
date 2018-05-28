@@ -80,3 +80,18 @@ Sabendo disso, temos a tabela final abaixo:
 chmod 777 file
 ```
 
+Verificar usuários existentes
+```
+cat /etc/passwd
+more /etc/passwd  (usando paginação)
+```
+
+Acessar outro usuário
+```
+su <<user name>>
+```
+
+Instalação de pacotes (CentOs)
+```
+sudo yum install <<nome do software>>
+```
