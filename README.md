@@ -1,1 +1,1 @@
-# data-science-studies
+# Reference commands and instructions
